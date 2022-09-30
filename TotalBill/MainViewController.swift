@@ -37,6 +37,8 @@ class MainViewController: UIViewController {
         return label
     }()
     
+    let totalBillView = TotalBillView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +52,7 @@ class MainViewController: UIViewController {
         view.addSubview(titleLabel)
         view.addSubview(logoImageView)
         view.addSubview(descriptionLabel)
+        view.addSubview(totalBillView)
     }
 
 
@@ -70,6 +73,12 @@ extension MainViewController {
             descriptionLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 15),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            totalBillView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
+            totalBillView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            totalBillView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            totalBillView.heightAnchor.constraint(equalToConstant: 150),
+            
             
         ])
     }

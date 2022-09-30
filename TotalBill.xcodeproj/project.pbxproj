@@ -12,6 +12,7 @@
 		E4CC35C328E5FF1300D2251E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC35C228E5FF1300D2251E /* MainViewController.swift */; };
 		E4CC35C828E5FF1400D2251E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4CC35C728E5FF1400D2251E /* Assets.xcassets */; };
 		E4CC35CB28E5FF1400D2251E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4CC35C928E5FF1400D2251E /* LaunchScreen.storyboard */; };
+		E4F89F6728E72FA600717D35 /* TotalBillView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F89F6628E72FA600717D35 /* TotalBillView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		E4CC35C728E5FF1400D2251E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4CC35CA28E5FF1400D2251E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4CC35CC28E5FF1400D2251E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F89F6628E72FA600717D35 /* TotalBillView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalBillView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				E4CC35BE28E5FF1300D2251E /* AppDelegate.swift */,
 				E4CC35C028E5FF1300D2251E /* SceneDelegate.swift */,
 				E4CC35C228E5FF1300D2251E /* MainViewController.swift */,
+				E4F89F6628E72FA600717D35 /* TotalBillView.swift */,
 				E4CC35C728E5FF1400D2251E /* Assets.xcassets */,
 				E4CC35C928E5FF1400D2251E /* LaunchScreen.storyboard */,
 				E4CC35CC28E5FF1400D2251E /* Info.plist */,
@@ -134,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F89F6728E72FA600717D35 /* TotalBillView.swift in Sources */,
 				E4CC35C328E5FF1300D2251E /* MainViewController.swift in Sources */,
 				E4CC35BF28E5FF1300D2251E /* AppDelegate.swift in Sources */,
 				E4CC35C128E5FF1300D2251E /* SceneDelegate.swift in Sources */,
