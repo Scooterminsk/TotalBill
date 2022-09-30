@@ -32,7 +32,17 @@ class PersonsView: UIView {
         button.setTitle("-", for: .normal)
         button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
         button.backgroundColor = .black
-        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 80)
+        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    lazy var plusButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("+", for: .normal)
+        button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
+        button.backgroundColor = .black
+        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -55,6 +65,7 @@ class PersonsView: UIView {
         addSubview(titleLabel)
         addSubview(backgroundGrayView)
         backgroundGrayView.addSubview(minusButton)
+        backgroundGrayView.addSubview(plusButton)
     }
     
     private func setConstraints() {
@@ -70,7 +81,12 @@ class PersonsView: UIView {
             minusButton.topAnchor.constraint(equalTo: backgroundGrayView.topAnchor, constant: 0),
             minusButton.leadingAnchor.constraint(equalTo: backgroundGrayView.leadingAnchor, constant: 0),
             minusButton.heightAnchor.constraint(equalTo: backgroundGrayView.heightAnchor),
-            minusButton.widthAnchor.constraint(equalToConstant: 80)
+            minusButton.widthAnchor.constraint(equalToConstant: 80),
+            
+            plusButton.topAnchor.constraint(equalTo: backgroundGrayView.topAnchor, constant: 0),
+            plusButton.trailingAnchor.constraint(equalTo: backgroundGrayView.trailingAnchor, constant: 0),
+            plusButton.heightAnchor.constraint(equalTo: backgroundGrayView.heightAnchor),
+            plusButton.widthAnchor.constraint(equalToConstant: 80)
             
         ])
     }
