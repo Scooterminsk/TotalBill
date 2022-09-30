@@ -27,6 +27,16 @@ class PersonsView: UIView {
         return view
     }()
     
+    lazy var minusButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("-", for: .normal)
+        button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
+        button.backgroundColor = .black
+        button.titleLabel?.font = UIFont(name: "Avenir Next", size: 80)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -44,6 +54,7 @@ class PersonsView: UIView {
         
         addSubview(titleLabel)
         addSubview(backgroundGrayView)
+        backgroundGrayView.addSubview(minusButton)
     }
     
     private func setConstraints() {
@@ -54,7 +65,12 @@ class PersonsView: UIView {
             backgroundGrayView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
             backgroundGrayView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             backgroundGrayView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            backgroundGrayView.heightAnchor.constraint(equalToConstant: 100)
+            backgroundGrayView.heightAnchor.constraint(equalToConstant: 100),
+            
+            minusButton.topAnchor.constraint(equalTo: backgroundGrayView.topAnchor, constant: 0),
+            minusButton.leadingAnchor.constraint(equalTo: backgroundGrayView.leadingAnchor, constant: 0),
+            minusButton.heightAnchor.constraint(equalTo: backgroundGrayView.heightAnchor),
+            minusButton.widthAnchor.constraint(equalToConstant: 80)
             
         ])
     }
