@@ -31,7 +31,6 @@ class PersonsView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("-", for: .normal)
         button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
-        button.backgroundColor = .black
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -41,10 +40,21 @@ class PersonsView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("+", for: .normal)
         button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
-        button.backgroundColor = .black
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
+    }()
+    
+    let counterLabel: UILabel = {
+        let label = UILabel()
+        label.text = "0"
+        label.textColor = .black
+        label.font = UIFont(name: "Avenir Next Bold", size: 48)
+        label.textAlignment = .center
+        label.adjustsFontSizeToFitWidth = true
+        label.minimumScaleFactor = 0.7
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }()
     
     override init(frame: CGRect) {
@@ -66,6 +76,7 @@ class PersonsView: UIView {
         addSubview(backgroundGrayView)
         backgroundGrayView.addSubview(minusButton)
         backgroundGrayView.addSubview(plusButton)
+        backgroundGrayView.addSubview(counterLabel)
     }
     
     private func setConstraints() {
@@ -86,7 +97,11 @@ class PersonsView: UIView {
             plusButton.topAnchor.constraint(equalTo: backgroundGrayView.topAnchor, constant: 0),
             plusButton.trailingAnchor.constraint(equalTo: backgroundGrayView.trailingAnchor, constant: 0),
             plusButton.heightAnchor.constraint(equalTo: backgroundGrayView.heightAnchor),
-            plusButton.widthAnchor.constraint(equalToConstant: 80)
+            plusButton.widthAnchor.constraint(equalToConstant: 80),
+            
+            counterLabel.centerYAnchor.constraint(equalTo: backgroundGrayView.centerYAnchor),
+            counterLabel.leadingAnchor.constraint(equalTo: minusButton.trailingAnchor, constant: 10),
+            counterLabel.trailingAnchor.constraint(equalTo: plusButton.leadingAnchor, constant: -10)
             
         ])
     }
