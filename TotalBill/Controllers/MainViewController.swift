@@ -107,7 +107,7 @@ extension MainViewController {
             tipsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             tipsView.heightAnchor.constraint(equalToConstant: 130),
             
-            calculateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -5),
+            calculateButton.topAnchor.constraint(equalTo: tipsView.bottomAnchor),
             calculateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             calculateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             calculateButton.heightAnchor.constraint(equalToConstant: 60),
