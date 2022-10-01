@@ -44,6 +44,7 @@ class MainViewController: UIViewController {
         button.backgroundColor = #colorLiteral(red: 0.639077723, green: 0.2492567599, blue: 0.6254395843, alpha: 1)
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 20)
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(calculateButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -73,6 +74,17 @@ class MainViewController: UIViewController {
         view.addSubview(tipsView)
     }
 
+    @objc func calculateButtonTapped() {
+        guard let result = totalBillView.summTextField.text,
+              let intResult = Int(result) else { return }
+        
+        let summ = (intResult + intResult * tipsView.tipsAmount / 100) / personsView.counter
+        
+        let alert = UIAlertController(title: "Total summ for one person is", message: "\(summ)", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Cancel", style: .cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
+    }
 
 }
 
