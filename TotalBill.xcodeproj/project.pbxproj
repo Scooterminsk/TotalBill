@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4745BFF28E8823D00E305D0 /* TipsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4745BFE28E8823D00E305D0 /* TipsCollectionView.swift */; };
+		E4745C0128E8833100E305D0 /* TipsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4745C0028E8833100E305D0 /* TipsCollectionViewCell.swift */; };
 		E4CC35BF28E5FF1300D2251E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC35BE28E5FF1300D2251E /* AppDelegate.swift */; };
 		E4CC35C128E5FF1300D2251E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC35C028E5FF1300D2251E /* SceneDelegate.swift */; };
 		E4CC35C328E5FF1300D2251E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CC35C228E5FF1300D2251E /* MainViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4745BFE28E8823D00E305D0 /* TipsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCollectionView.swift; sourceTree = "<group>"; };
+		E4745C0028E8833100E305D0 /* TipsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCollectionViewCell.swift; sourceTree = "<group>"; };
 		E4CC35BB28E5FF1300D2251E /* TotalBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotalBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CC35BE28E5FF1300D2251E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4CC35C028E5FF1300D2251E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E4745C0228E8834600E305D0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E4CC35BE28E5FF1300D2251E /* AppDelegate.swift */,
+				E4CC35C028E5FF1300D2251E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E4745C0328E8836600E305D0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E4CC35C228E5FF1300D2251E /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E4745C0428E8837D00E305D0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E4745C0528E8839800E305D0 /* Cells */,
+				E4F89F6628E72FA600717D35 /* TotalBillView.swift */,
+				E4F89F6828E7351E00717D35 /* PersonsView.swift */,
+				E4745BFE28E8823D00E305D0 /* TipsCollectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E4745C0528E8839800E305D0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E4745C0028E8833100E305D0 /* TipsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		E4CC35B228E5FF1300D2251E = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +98,9 @@
 		E4CC35BD28E5FF1300D2251E /* TotalBill */ = {
 			isa = PBXGroup;
 			children = (
-				E4CC35BE28E5FF1300D2251E /* AppDelegate.swift */,
-				E4CC35C028E5FF1300D2251E /* SceneDelegate.swift */,
-				E4CC35C228E5FF1300D2251E /* MainViewController.swift */,
-				E4F89F6628E72FA600717D35 /* TotalBillView.swift */,
-				E4F89F6828E7351E00717D35 /* PersonsView.swift */,
+				E4745C0228E8834600E305D0 /* Application */,
+				E4745C0328E8836600E305D0 /* Controllers */,
+				E4745C0428E8837D00E305D0 /* Views */,
 				E4CC35C728E5FF1400D2251E /* Assets.xcassets */,
 				E4CC35C928E5FF1400D2251E /* LaunchScreen.storyboard */,
 				E4CC35CC28E5FF1400D2251E /* Info.plist */,
@@ -142,7 +180,9 @@
 			files = (
 				E4F89F6728E72FA600717D35 /* TotalBillView.swift in Sources */,
 				E4F89F6928E7351E00717D35 /* PersonsView.swift in Sources */,
+				E4745BFF28E8823D00E305D0 /* TipsCollectionView.swift in Sources */,
 				E4CC35C328E5FF1300D2251E /* MainViewController.swift in Sources */,
+				E4745C0128E8833100E305D0 /* TipsCollectionViewCell.swift in Sources */,
 				E4CC35BF28E5FF1300D2251E /* AppDelegate.swift in Sources */,
 				E4CC35C128E5FF1300D2251E /* SceneDelegate.swift in Sources */,
 			);
