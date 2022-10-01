@@ -31,7 +31,9 @@ class PersonsView: UIView {
         let button = UIButton(type: .system)
         button.setTitle("-", for: .normal)
         button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
+        button.isEnabled = false
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.addTarget(self, action: #selector(minusButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -41,13 +43,14 @@ class PersonsView: UIView {
         button.setTitle("+", for: .normal)
         button.tintColor = #colorLiteral(red: 0.4510066509, green: 0.4966486692, blue: 0.5633206367, alpha: 1)
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 60)
+        button.addTarget(self, action: #selector(plusButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
     
     let counterLabel: UILabel = {
         let label = UILabel()
-        label.text = "0"
+        label.text = "1"
         label.textColor = .black
         label.font = UIFont(name: "Avenir Next Bold", size: 48)
         label.textAlignment = .center
@@ -56,6 +59,8 @@ class PersonsView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
+    
+    var counter = 1
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -77,6 +82,21 @@ class PersonsView: UIView {
         backgroundGrayView.addSubview(minusButton)
         backgroundGrayView.addSubview(plusButton)
         backgroundGrayView.addSubview(counterLabel)
+    }
+    
+    @objc func minusButtonTapped() {
+        if counter == 1 {
+            minusButton.isEnabled = false
+        } else {
+            counter -= 1
+            counterLabel.text = "\(counter)"
+        }
+    }
+    
+    @objc func plusButtonTapped() {
+        counter += 1
+        counterLabel.text = "\(counter)"
+        minusButton.isEnabled = true
     }
     
     private func setConstraints() {
