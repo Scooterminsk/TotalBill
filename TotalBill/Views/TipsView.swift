@@ -21,11 +21,13 @@ class TipsView: UIView {
     
     let tipsCollectionView: UICollectionView = {
        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.minimumInteritemSpacing = 4.5
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.backgroundColor = .red
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
+    
+    let tipsArray = ["0%", "10%", "15%", "20%"]
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -62,8 +64,9 @@ extension TipsView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = tipsCollectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? TipsCollectionViewCell else {
             return UICollectionViewCell()
-            
         }
+        
+        cell.percentLabel.text = tipsArray[indexPath.row]
         
         return cell
     }
@@ -71,6 +74,13 @@ extension TipsView: UICollectionViewDataSource {
 
 extension TipsView: UICollectionViewDelegate {
     
+}
+
+extension TipsView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: tipsCollectionView.frame.width / 5,
+               height: tipsCollectionView.frame.width / 5)
+    }
 }
 
 extension TipsView {
