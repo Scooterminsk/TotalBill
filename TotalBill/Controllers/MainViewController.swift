@@ -61,6 +61,7 @@ class MainViewController: UIViewController {
         setupViews()
         setConstraints()
         addTap()
+        addKeyboardObservers()
     }
     
     private func setupViews() {
@@ -95,6 +96,17 @@ class MainViewController: UIViewController {
     
     @objc func hideKeyboard() {
         view.endEditing(true)
+    }
+    
+    private func addKeyboardObservers() {
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: nil) { nc in
+            self.view.frame.origin.y = -100
+        }
+        
+        NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: nil) { nc in
+            self.view.frame.origin.y = 0
+        }
     }
 
 }
