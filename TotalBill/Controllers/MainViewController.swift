@@ -60,6 +60,7 @@ class MainViewController: UIViewController {
         
         setupViews()
         setConstraints()
+        addTap()
     }
     
     private func setupViews() {
@@ -84,6 +85,16 @@ class MainViewController: UIViewController {
         let action = UIAlertAction(title: "Cancel", style: .cancel)
         alert.addAction(action)
         self.present(alert, animated: true)
+    }
+    
+    private func addTap() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
 
 }
