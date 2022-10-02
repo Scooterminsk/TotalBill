@@ -23,7 +23,7 @@ class TipsCollectionViewCell: UICollectionViewCell {
         didSet {
             if isSelected {
                 layer.borderWidth = 3
-                layer.borderColor = #colorLiteral(red: 0.639077723, green: 0.2492567599, blue: 0.6254395843, alpha: 1)
+                layer.borderColor = #colorLiteral(red: 0.4549019608, green: 0.08235294118, blue: 0.7058823529, alpha: 1)
             } else {
                 layer.borderWidth = 0
             }

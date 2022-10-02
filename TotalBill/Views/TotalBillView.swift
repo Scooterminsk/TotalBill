@@ -27,7 +27,7 @@ class TotalBillView: UIView {
         textField.font = UIFont(name: "Avenir Next Bold", size: 48)
         textField.textAlignment = .center
         textField.keyboardType = .numberPad
-        textField.tintColor = #colorLiteral(red: 0.639077723, green: 0.2492567599, blue: 0.6254395843, alpha: 1)
+        textField.tintColor = #colorLiteral(red: 0.4549019608, green: 0.08235294118, blue: 0.7058823529, alpha: 1)
         textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()

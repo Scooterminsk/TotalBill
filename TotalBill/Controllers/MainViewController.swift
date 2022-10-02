@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("Calculate", for: .normal)
         button.tintColor = .white
-        button.backgroundColor = #colorLiteral(red: 0.639077723, green: 0.2492567599, blue: 0.6254395843, alpha: 1)
+        button.backgroundColor = #colorLiteral(red: 0.4549019608, green: 0.08235294118, blue: 0.7058823529, alpha: 1)
         button.titleLabel?.font = UIFont(name: "Avenir Next", size: 20)
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(calculateButtonTapped), for: .touchUpInside)
