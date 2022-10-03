@@ -13,7 +13,6 @@ class MainViewController: UIViewController {
         let label = UILabel()
         label.text = "Total bill"
         label.textColor = .black
-        label.font = UIFont(name: "Avenir Next Bold", size: 40)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -68,6 +67,8 @@ class MainViewController: UIViewController {
         view.backgroundColor = #colorLiteral(red: 0.9813271165, green: 0.9813271165, blue: 0.9813271165, alpha: 1)
         
         view.addSubview(titleLabel)
+        titleLabel.font = UIFont(name: "Avenir Next Bold", size: view.frame.height * 0.046)
+        
         view.addSubview(logoImageView)
         view.addSubview(descriptionLabel)
         view.addSubview(totalBillView)
