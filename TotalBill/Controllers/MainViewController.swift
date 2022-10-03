@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
         label.textColor = .black
         label.font = UIFont(name: "Avenir Next Bold", size: 15)
         label.adjustsFontSizeToFitWidth = true
-        label.minimumScaleFactor = 0.7
+//        label.minimumScaleFactor = 0.7
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
