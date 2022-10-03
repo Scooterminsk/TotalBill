@@ -59,8 +59,7 @@ class TotalBillView: UIView {
             summTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
             summTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
             summTextField.trailingAnchor.constraint(equalTo: trailingAnchor, constant: 0),
-            summTextField.heightAnchor.constraint(equalToConstant: 100),
-            
+            summTextField.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }
