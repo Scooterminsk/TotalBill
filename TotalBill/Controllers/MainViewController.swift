@@ -121,8 +121,8 @@ extension MainViewController {
             
             logoImageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 10),
             logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            logoImageView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
-            logoImageView.heightAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.5),
+            logoImageView.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.23),
+            logoImageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.23),
             
             descriptionLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 5),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
