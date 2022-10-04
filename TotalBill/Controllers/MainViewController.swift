@@ -80,7 +80,13 @@ class MainViewController: UIViewController {
 
     @objc func calculateButtonTapped() {
         guard let result = totalBillView.summTextField.text,
-              let intResult = Int(result) else { return }
+              let intResult = Int(result) else {
+            let alert = UIAlertController(title: "Oops", message: "Please, enter the bill", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Cancel", style: .cancel)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+            return
+        }
         
         let summ = (intResult + intResult * tipsView.tipsAmount / 100) / personsView.counter
         
