@@ -141,12 +141,12 @@ extension MainViewController {
             tipsView.topAnchor.constraint(equalTo: personsView.bottomAnchor, constant: 5),
             tipsView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             tipsView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            tipsView.heightAnchor.constraint(equalToConstant: 130),
+            tipsView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.14),
             
-            calculateButton.topAnchor.constraint(equalTo: tipsView.bottomAnchor),
+            calculateButton.topAnchor.constraint(equalTo: tipsView.bottomAnchor, constant: 10),
             calculateButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             calculateButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            calculateButton.heightAnchor.constraint(equalToConstant: 60),
+            calculateButton.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.06)
         ])
     }
     
