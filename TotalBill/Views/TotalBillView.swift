@@ -60,6 +60,7 @@ class TotalBillView: UIView {
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 0),
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            titleLabel.heightAnchor.constraint(equalToConstant: 20),
             
             summTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2),
             summTextField.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 0),
